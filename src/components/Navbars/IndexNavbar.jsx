@@ -86,8 +86,8 @@ class ComponentsNavbar extends React.Component {
               title="Designed and Coded by Creative Tim"
               tag={Link}
             >
-              <span>BLK• </span>
-              Design System React
+              <span>Ceda • </span>
+              Diferenças de Aprendizado
             </NavbarBrand>
             <button
               aria-expanded={this.state.collapseOpen}
@@ -171,7 +171,7 @@ class ComponentsNavbar extends React.Component {
                   onClick={e => e.preventDefault()}
                 >
                   <i className="fa fa-cogs d-lg-none d-xl-none" />
-                  Getting started
+                  Menu
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-with-icons">
                   <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/tutorial">
@@ -192,15 +192,6 @@ class ComponentsNavbar extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <Button
-                  className="nav-link d-none d-lg-block"
-                  color="default"
-                  onClick={this.scrollToDownload}
-                >
-                  <i className="tim-icons icon-cloud-download-93" /> Download
-                </Button>
-              </NavItem>
             </Nav>
           </Collapse>
         </Container>
