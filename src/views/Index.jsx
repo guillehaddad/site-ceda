@@ -32,17 +32,17 @@ class Index extends React.Component {
         <div className="wrapper">
           <PageHeader />
           <div className="main">
-            <NucleoIcons />
+            <Download />
+            <JavaScript />
+            <Tabs />
             <Basics />
             <Navbars />
-            <Tabs />
             <Pagination />
             <Notifications />
             <Typography />
-            <JavaScript />
             <Signup />
             <Examples />
-            <Download />
+            <NucleoIcons />
           </div>
           <Footer />
         </div>

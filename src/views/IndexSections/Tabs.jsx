@@ -34,52 +34,22 @@ class Tabs extends React.Component {
       <div className="section section-tabs">
         <Container>
           <div className="title">
-            <h3 className="mb-3">Navigation Tabs</h3>
+            <h3 className="mb-3">Serviços</h3>
           </div>
           <Row>
             <Col className="ml-auto mr-auto" md="10" xl="6">
-              <div className="mb-3">
-                <small className="text-uppercase font-weight-bold">
-                  With icons
-                </small>
-              </div>
               <Card>
                 <CardHeader>
                   <Nav className="nav-tabs-info" role="tablist" tabs>
                     <NavItem>
                       <NavLink
                         className={classnames({
-                          active: this.state.iconTabs === 1
+                          active: this.state.textTabs === 4
                         })}
-                        onClick={e => this.toggleTabs(e, "iconTabs", 1)}
-                        href="#pablo"
+                        onClick={e => this.toggleTabs(e, "textTabs", 4)}
+                        href="#"
                       >
-                        <i className="tim-icons icon-spaceship" />
-                        Profile
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({
-                          active: this.state.iconTabs === 2
-                        })}
-                        onClick={e => this.toggleTabs(e, "iconTabs", 2)}
-                        href="#pablo"
-                      >
-                        <i className="tim-icons icon-settings-gear-63" />
-                        Settings
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({
-                          active: this.state.iconTabs === 3
-                        })}
-                        onClick={e => this.toggleTabs(e, "iconTabs", 3)}
-                        href="#pablo"
-                      >
-                        <i className="tim-icons icon-bag-16" />
-                        Options
+                        Consultas
                       </NavLink>
                     </NavItem>
                   </Nav>
@@ -91,32 +61,9 @@ class Tabs extends React.Component {
                   >
                     <TabPane tabId="link1">
                       <p>
-                        Collaboratively administrate empowered markets via
-                        plug-and-play networks. Dynamically procrastinate B2C
-                        users after installed base benefits. <br />
-                        <br />
-                        Dramatically visualize customer directed convergence
-                        without revolutionary ROI.
-                      </p>
-                    </TabPane>
-                    <TabPane tabId="link2">
-                      <p>
-                        Completely synergize resource taxing relationships via
-                        premier niche markets. Professionally cultivate
-                        one-to-one customer service with robust ideas. <br />
-                        <br />
-                        Dynamically innovate resource-leveling customer service
-                        for state of the art customer service.
-                      </p>
-                    </TabPane>
-                    <TabPane tabId="link3">
-                      <p>
-                        Efficiently unleash cross-media information without
-                        cross-media value. Quickly maximize timely deliverables
-                        for real-time schemas. <br />
-                        <br />
-                        Dramatically maintain clicks-and-mortar solutions
-                        without functional solutions.
+                        Durante a entrevista inicial, todas as queixas, dúvidas e sintomas do(a) paciente serão expostas pelos responsáveis para uma profissional neuropsicóloga. Exames e relatórios relacionados às dificuldades apresentadas também deverão ser apresentados neste momento. Caso o(a) paciente seja adulto, o conteúdo será exposto pelo(a) mesmo(a) e, não será necessária a presença dos responsáveis.<br />
+                        As consultas são previamente agendadas de 2ª à 6ª feira, no horário comercial, e terão uma hora de duração. Quando o(a) paciente possuir menos de 18 anos de idade, esta consulta deverá ser agendada pelos responsáveis, os quais deverão também estar presentes na entrevista inicial com a neuropsicóloga.<br />
+                        Neste momento será possível descartar causas que não se enquadrem no diagnóstico de Distúrbio de Aprendizagem, Distúrbio do Desenvolvimento Neuropsicomotor, então, encaminhar o(a) paciente ao profissional adequado. Caso seja verificada a necessidade da avaliação multi e interdisciplinar, a própria profissional irá conceder as informações necessárias sobre este processo.
                       </p>
                     </TabPane>
                   </TabContent>
@@ -124,11 +71,6 @@ class Tabs extends React.Component {
               </Card>
             </Col>
             <Col className="ml-auto mr-auto" md="10" xl="6">
-              <div className="mb-3">
-                <small className="text-uppercase font-weight-bold">
-                  With text
-                </small>
-              </div>
               <Card>
                 <CardHeader>
                   <Nav className="nav-tabs-info" role="tablist" tabs>
@@ -138,31 +80,9 @@ class Tabs extends React.Component {
                           active: this.state.textTabs === 4
                         })}
                         onClick={e => this.toggleTabs(e, "textTabs", 4)}
-                        href="#pablo"
+                        href="#"
                       >
-                        Profile
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({
-                          active: this.state.textTabs === 5
-                        })}
-                        onClick={e => this.toggleTabs(e, "textTabs", 5)}
-                        href="#pablo"
-                      >
-                        Settings
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({
-                          active: this.state.textTabs === 6
-                        })}
-                        onClick={e => this.toggleTabs(e, "textTabs", 6)}
-                        href="#pablo"
-                      >
-                        Options
+                        Avaliações
                       </NavLink>
                     </NavItem>
                   </Nav>
@@ -174,38 +94,80 @@ class Tabs extends React.Component {
                   >
                     <TabPane tabId="link4">
                       <p>
-                        These cases are perfectly simple and easy to
-                        distinguish. In a free hour, when our power of choice is
-                        untrammelled and when nothing prevents our being able to
-                        do what we like best, every pleasure is to be welcomed
-                        and every pain avoided. <br />
-                        But in certain circumstances and owing to the claims of
-                        duty or the obligations of business it will frequently
-                        occur that pleasures
+                        A Equipe Multidisciplinar é composta por Fonoaudiólogas, Psicopedagogas e Neuropsicólogas para atender crianças, adolescentes e adultos que apresentam  Distúrbios de Aprendizagem e/ou Distúrbios do Desenvolvimento Neuropsicomotor.<br />
+                        Em geral, a Equipe Multidisciplinar é solicitada quando há a necessidade de um laudo para auxiliar educadores, terapeutas e pais de pessoas com Dislexia e/outros Distúrbios de Aprendizagem.<br />
+                        O trabalho da Equipe Multidisciplinar se inicia quando há o acolhimento dos pacientes adultos ou dos pais dos pacientes menores de 18 anos numa Primeira Entrevista, que é a ocasião em que a Psicóloga/Neuropsicóloga vai ouvir as queixas, os problemas do paciente, o seu histórico de vida, as situações em que se apresentam e, assim, vai verificar se o caso apresentado é passível de avaliação.<br />
+                        Quando a avaliação se aplica ao caso, são marcadas consultas com a Psicóloga/Neuropsicóloga e com a Fonoaudióloga/Psicopedagoga. Nessas consultas, são aplicados testes específicos a cada área e idade.<br />
                       </p>
                     </TabPane>
-                    <TabPane tabId="link5">
+                  </TabContent>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          
+          <Row>
+            <Col className="ml-auto mr-auto" md="10" xl="6">
+              <Card>
+                <CardHeader>
+                  <Nav className="nav-tabs-info" role="tablist" tabs>
+                    <NavItem>
+                      <NavLink
+                        className={classnames({
+                          active: this.state.textTabs === 4
+                        })}
+                        onClick={e => this.toggleTabs(e, "textTabs", 4)}
+                        href="#"
+                      >
+                        Intervenções
+                      </NavLink>
+                    </NavItem>
+                  </Nav>
+                </CardHeader>
+                <CardBody>
+                  <TabContent
+                    className="tab-space"
+                    activeTab={"link" + this.state.iconTabs}
+                  >
+                    <TabPane tabId="link1">
                       <p>
-                        I will be the leader of a company that ends up being
-                        worth billions of dollars, because I got the answers. I
-                        understand culture. I am the nucleus. I think that’s a
-                        responsibility that I have, to push possibilities, to
-                        show people, this is the level that things could be at.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
+                        Independentemente de quais forem as diversidades ou dificuldades nos processos de desenvolvimento e aprendizagem, a intervenção terapêutica sempre se faz necessária. Intervenções pontuais voltadas às particularidades de cada caso objetivam auxiliar na superação e adaptação de limitações e dificuldades, visando impulsionar o pleno desenvolvimento. Para crianças, adolescentes e adultos com desempenho atípico ou atrasado, a intervenção correta também ajudará no fortalecimento da autoestima e autovalorização.
                       </p>
                     </TabPane>
-                    <TabPane tabId="link6">
+                  </TabContent>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col className="ml-auto mr-auto" md="10" xl="6">
+              <Card>
+                <CardHeader>
+                  <Nav className="nav-tabs-info" role="tablist" tabs>
+                    <NavItem>
+                      <NavLink
+                        className={classnames({
+                          active: this.state.textTabs === 4
+                        })}
+                        onClick={e => this.toggleTabs(e, "textTabs", 4)}
+                        href="#"
+                      >
+                        Reforço Escolar
+                      </NavLink>
+                    </NavItem>
+                  </Nav>
+                </CardHeader>
+                <CardBody>
+                  <TabContent
+                    className="tab-space"
+                    activeTab={"link" + this.state.textTabs}
+                  >
+                    <TabPane tabId="link4">
                       <p>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
+                        PORTUGUÊS
+                        ​Idade: Todas as idades.
+                        Com foco nos conteúdos gramaticais, leitura e escrita, o curso de português tem como objetivo auxiliar o aluno na absorção do conteúdo e aplicação correta da língua portuguesa no cotidiano do aluno.
+                        REFORÇO ESCOLAR
+                        ​Idade: Todas as idades.
+                        O reforço escolar tem como objetivo auxiliar o alunos nas matérias da escola onde exista dificuldade de compreensão e absorção do conteúdo. Ao mesmo tempo que trabalha o conteúdo importante para o desempenho nas provas, também auxilia no desenvolvimento da habilidade de aprender a aprender.
                       </p>
                     </TabPane>
                   </TabContent>

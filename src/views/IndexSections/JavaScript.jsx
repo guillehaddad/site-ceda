@@ -20,27 +20,8 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupText,
-  Label,
-  UncontrolledCarousel
+  Label
 } from "reactstrap";
-
-const carouselItems = [
-  {
-    src: require("assets/img/denys.jpg"),
-    altText: "Slide 1",
-    caption: ""
-  },
-  {
-    src: require("assets/img/fabien-bazanegue.jpg"),
-    altText: "Slide 2",
-    caption: ""
-  },
-  {
-    src: require("assets/img/mark-finn.jpg"),
-    altText: "Slide 3",
-    caption: ""
-  }
-];
 
 class JavaScript extends React.Component {
   constructor(props) {
@@ -66,34 +47,58 @@ class JavaScript extends React.Component {
           src={require("assets/img/path5.png")}
         />
         <Container>
-          <h3 className="title mb-5">Javascript components</h3>
-          <h4 className="mb-5">Modal</h4>
+          <h3 className="title mb-5">Serviços</h3>
           <Row id="modals">
             <Col md="4">
               <Button
                 color="primary"
                 onClick={() => this.toggleModal("demoModal")}
               >
-                Launch Modal
+                Consultas
               </Button>
             </Col>
             <Col md="4">
               <Button
-                color="warning"
-                onClick={() => this.toggleModal("miniModal")}
+                color="primary"
+                onClick={() => this.toggleModal("demoModal2")}
               >
-                Launch Modal Mini
+                Avaliações
               </Button>
             </Col>
             <Col md="4">
               <Button
-                color="success"
-                onClick={() => this.toggleModal("formModal")}
+                color="primary"
+                onClick={() => this.toggleModal("demoModal3")}
               >
-                Launch Modal Form
+                Intervenções
               </Button>
             </Col>
-            {/* Sart Demo Modal */}
+            <Col md="4">
+              <Button
+                color="primary"
+                onClick={() => this.toggleModal("demoModal4")}
+              >
+                Reforço Escolar
+              </Button>
+            </Col>
+            <Col md="4">
+              <Button
+                color="primary"
+                onClick={() => this.toggleModal("demoModal5")}
+              >
+                Transtornos do Espectro Autista (TEA)
+              </Button>
+            </Col>
+            <Col md="4">
+              <Button
+                color="primary"
+                onClick={() => this.toggleModal("demoModal6")}
+              >
+                Triagem
+              </Button>
+            </Col>
+            
+            {/* Start Demo Modal */}
             <Modal
               isOpen={this.state.demoModal}
               toggle={() => this.toggleModal("demoModal")}
@@ -105,357 +110,229 @@ class JavaScript extends React.Component {
                 >
                   <i className="tim-icons icon-simple-remove" />
                 </button>
-                <h4 className="title title-up">Modal title</h4>
+                <h4 className="title title-up">Consultas</h4>
               </div>
               <div className="modal-body">
                 <p>
-                  Far far away, behind the word mountains, far from the
-                  countries Vokalia and Consonantia, there live the blind texts.
-                  Separated they live in Bookmarksgrove right at the coast of
-                  the Semantics, a large language ocean. A small river named
-                  Duden flows by their place and supplies it with the necessary
-                  regelialia. It is a paradisematic country, in which roasted
-                  parts of sentences fly into your mouth.
+                  Durante a entrevista inicial, todas as queixas, dúvidas e sintomas do(a) paciente serão expostas pelos responsáveis para uma profissional neuropsicóloga. Exames e relatórios relacionados às dificuldades apresentadas também deverão ser apresentados neste momento. Caso o(a) paciente seja adulto, o conteúdo será exposto pelo(a) mesmo(a) e, não será necessária a presença dos responsáveis.<br />
+                  As consultas são previamente agendadas de 2ª à 6ª feira, no horário comercial, e terão uma hora de duração. Quando o(a) paciente possuir menos de 18 anos de idade, esta consulta deverá ser agendada pelos responsáveis, os quais deverão também estar presentes na entrevista inicial com a neuropsicóloga.<br />
+                  Neste momento será possível descartar causas que não se enquadrem no diagnóstico de Distúrbio de Aprendizagem, Distúrbio do Desenvolvimento Neuropsicomotor, então, encaminhar o(a) paciente ao profissional adequado. Caso seja verificada a necessidade da avaliação multi e interdisciplinar, a própria profissional irá conceder as informações necessárias sobre este processo.
                 </p>
               </div>
               <div className="modal-footer">
-                <Button color="default" type="button">
-                  Nice Button
-                </Button>
                 <Button
                   color="danger"
                   type="button"
                   onClick={() => this.toggleModal("demoModal")}
                 >
-                  Close
+                  Fechar
                 </Button>
               </div>
             </Modal>
             {/* End Demo Modal */}
-            {/* Start Mini Modal */}
+
+            {/* Start Demo Modal 2*/}
             <Modal
-              modalClassName="modal-mini modal-primary modal-mini"
-              isOpen={this.state.miniModal}
-              toggle={() => this.toggleModal("miniModal")}
+              isOpen={this.state.demoModal2}
+              toggle={() => this.toggleModal("demoModal2")}
             >
               <div className="modal-header justify-content-center">
                 <button
                   className="close"
-                  onClick={() => this.toggleModal("miniModal")}
+                  onClick={() => this.toggleModal("demoModal2")}
                 >
-                  <i className="tim-icons icon-simple-remove text-white" />
+                  <i className="tim-icons icon-simple-remove" />
                 </button>
-                <div className="modal-profile">
-                  <i className="tim-icons icon-single-02" />
-                </div>
+                <h4 className="title title-up">Avaliação Multi-disciplinar</h4>
               </div>
               <div className="modal-body">
-                <p>Always have an access to your profile</p>
+                <p>
+                  A Equipe Multidisciplinar é composta por Fonoaudiólogas, Psicopedagogas e Neuropsicólogas para atender crianças, adolescentes e adultos que apresentam  Distúrbios de Aprendizagem e/ou Distúrbios do Desenvolvimento Neuropsicomotor.
+                  Em geral, a Equipe Multidisciplinar é solicitada quando há a necessidade de um laudo para auxiliar educadores, terapeutas e pais de pessoas com Dislexia e/outros Distúrbios de Aprendizagem. 
+                  O trabalho da Equipe Multidisciplinar se inicia quando há o acolhimento dos pacientes adultos ou dos pais dos pacientes menores de 18 anos numa Primeira Entrevista, que é a ocasião em que a Psicóloga/Neuropsicóloga vai ouvir as queixas, os problemas do paciente, o seu histórico de vida, as situações em que se apresentam e, assim, vai verificar se o caso apresentado é passível de avaliação.
+                  Quando a avaliação se aplica ao caso, são marcadas consultas com a Psicóloga/Neuropsicóloga e com a Fonoaudióloga/Psicopedagoga. Nessas consultas, são aplicados testes específicos a cada área e idade.
+                  Após a fase de coleta de dados, inicia-se um período de estudos, quando cada profissional avalia os dados obtidos em sua área de atuação.
+                  Quando os exames complementares estiverem à disposição da equipe, há uma reunião das especialistas onde serão expostos para cada parte os resultados obtidos durante a Avaliação Multidisciplinar.
+                  É neste encontro que se estabelecem o resultado e os encaminhamentos, isto é, estabelece-se qual o distúrbio que o paciente apresenta e quais as intervenções necessárias para o mesmo.
+                  A Entrevista Devolutiva, quando o paciente adulto ou os pais de pacientes menores de 18 anos são convocados pela Neuropsicóloga para serem informados sobre os resultados do processo será agendada uma orientação junto ao responsável pelos planos de intervenções oferecidos pela clínica.
+                  AVALIAÇÃO COMPLETA
+                  De acordo com a hipótese diagnóstica realizada após a entrevista inicial, será apresentado um plano de atendimento com a psicopedagoga, neuropsicóloga e fonoaudióloga.
+                  AVALIAÇÃO COMPLEMENTAR
+                  Indicação para atendimento em uma ou mais especialidades de acordo com orientação do profissional solicitante.
+                  Investigações mais aprofundadas podem ser necessárias para o atendimento de diagnósticos diferenciais e de propostas terapêuticas. Para tanto, à luz dos prévios resultados, avaliações adicionais para atendimento em uma ou mais especialidades poderão ser indicadas.
+                </p>
               </div>
               <div className="modal-footer">
-                <Button className="btn-neutral" color="link" type="button">
-                  Back
-                </Button>
                 <Button
-                  className="btn-neutral"
-                  color="link"
-                  onClick={() => this.toggleModal("miniModal")}
+                  color="danger"
                   type="button"
+                  onClick={() => this.toggleModal("demoModal2")}
                 >
-                  Close
+                  Fechar
                 </Button>
               </div>
             </Modal>
-            {/* End Mini Modal */}
-            {/* Start Form Modal */}
+            {/* End Demo Modal 2*/}
+
+            {/* Start Demo Modal 3*/}
             <Modal
-              modalClassName="modal-black"
-              isOpen={this.state.formModal}
-              toggle={() => this.toggleModal("formModal")}
+              isOpen={this.state.demoModal3}
+              toggle={() => this.toggleModal("demoModal3")}
             >
               <div className="modal-header justify-content-center">
                 <button
                   className="close"
-                  onClick={() => this.toggleModal("formModal")}
+                  onClick={() => this.toggleModal("demoModal3")}
                 >
-                  <i className="tim-icons icon-simple-remove text-white" />
+                  <i className="tim-icons icon-simple-remove" />
                 </button>
-                <div className="text-muted text-center ml-auto mr-auto">
-                  <h3 className="mb-0">Sign in with</h3>
-                </div>
+                <h4 className="title title-up">Intervenções</h4>
               </div>
               <div className="modal-body">
-                <div className="btn-wrapper text-center">
-                  <Button
-                    className="btn-neutral btn-icon"
-                    color="default"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    <img alt="..." src={require("assets/img/github.svg")} />
-                  </Button>
-                  <Button
-                    className="btn-neutral btn-icon"
-                    color="default"
-                    href="#pablo"
-                    onClick={e => e.preventDefault()}
-                  >
-                    <img alt="..." src={require("assets/img/google.svg")} />
-                  </Button>
-                </div>
-                <div className="text-center text-muted mb-4 mt-3">
-                  <small>Or sign in with credentials</small>
-                </div>
-                <Form role="form">
-                  <FormGroup className="mb-3">
-                    <InputGroup
-                      className={classnames("input-group-alternative", {
-                        "input-group-focus": this.state.emailFocus
-                      })}
-                    >
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="tim-icons icon-email-85" />
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input
-                        placeholder="Email"
-                        type="email"
-                        onFocus={e => this.setState({ emailFocus: true })}
-                        onBlur={e => this.setState({ emailFocus: false })}
-                      />
-                    </InputGroup>
-                  </FormGroup>
-                  <FormGroup>
-                    <InputGroup
-                      className={classnames("input-group-alternative", {
-                        "input-group-focus": this.state.passwordFocus
-                      })}
-                    >
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="tim-icons icon-key-25" />
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input
-                        placeholder="Password"
-                        type="password"
-                        onFocus={e => this.setState({ passwordFocus: true })}
-                        onBlur={e => this.setState({ passwordFocus: false })}
-                      />
-                    </InputGroup>
-                  </FormGroup>
-                  <FormGroup check className="mt-3">
-                    <Label check>
-                      <Input defaultChecked type="checkbox" />
-                      <span className="form-check-sign" />
-                      Remember me!
-                    </Label>
-                  </FormGroup>
-                  <div className="text-center">
-                    <Button className="my-4" color="primary" type="button">
-                      Sign in
-                    </Button>
-                  </div>
-                </Form>
+                <p>
+                  Independentemente de quais forem as diversidades ou dificuldades nos processos de desenvolvimento e aprendizagem, a intervenção terapêutica sempre se faz necessária. Intervenções pontuais voltadas às particularidades de cada caso objetivam auxiliar na superação e adaptação de limitações e dificuldades, visando impulsionar o pleno desenvolvimento. Para crianças, adolescentes e adultos com desempenho atípico ou atrasado, a intervenção correta também ajudará no fortalecimento da autoestima e autovalorização.
+                  PSICOPEDAGOGIA
+                  O papel do Psicopedagogo é investigar os problemas existentes no processo do aprendizado. Seu trabalho visa atender, tratar e orientar o aluno e sua família, assim como a Escola e seus Professores, esclarecendo sobre os obstáculos que interferem diariamente na vida do educando.
+                  PSICOLOGIA
+                  Dentre seus focos de trabalho destacam-se a psicoterapia infantil e com adolescentes, também de adultos, acompanhamento familiar, tratamento especializado e efetivo em TEA – Transtorno do Espectro Autista, sob perspectivas neurodesenvolvimentais, atuação com a criança, a familia e a escola.
+                  NEUROPSICOLOGIA
+                  A Neuropsicologia tem um papel fundamental na compreensão do funcionamento cerebral e das suas respectivas alterações. Estuda a relação entre a atividade nervosa superior e o comportamento, a cognição, as emoções, a motivação e a vida em relação. A intervenção neuropsicológica consiste em avaliar e reabilitar/estimular as funções cognitivas (memória, atenção, linguagem oral e escrita, cálculo, capacidades visuo-espaciais, planeamento e acção, destreza manual, raciocínio, etc.).
+                  FONOAUDIOLOGIA
+                  O fonoaudiólogo intervirá nas queixas de atraso no desenvolvimento da fala (linguagem oral). Também é necessário acompanhar as habilidades de leitura, escrita e de adaptação escolar. Quanto mais precoce, intensiva e especializada for a intervenção, melhores serão os resultados.
+                  O Treinamento Auditivo em Cabine é um acompanhamento fonoaudiológico para reabilitar pessoas com alteração no exame de Processamento Auditivo Central. O objetivo principal é melhorar a atenção e memória auditiva, discriminação e compreensão auditiva.
+                </p>
+              </div>
+              <div className="modal-footer">
+                <Button
+                  color="danger"
+                  type="button"
+                  onClick={() => this.toggleModal("demoModal3")}
+                >
+                  Fechar
+                </Button>
               </div>
             </Modal>
-            {/* End Form Modal */}
-          </Row>
-          <br />
-          <br />
-          <h4 className="mb-5 mt-3">Datepicker</h4>
-          <Row>
-            <Col md="4">
-              <div className="datepicker-container">
-                <FormGroup>
-                  <ReactDatetime
-                    inputProps={{
-                      className: "form-control",
-                      placeholder: "Date Picker Here"
-                    }}
-                  />
-                </FormGroup>
+            {/* End Demo Modal 3*/}
+
+            {/* Start Demo Modal 4*/}
+            <Modal
+              isOpen={this.state.demoModal4}
+              toggle={() => this.toggleModal("demoModal4")}
+            >
+              <div className="modal-header justify-content-center">
+                <button
+                  className="close"
+                  onClick={() => this.toggleModal("demoModal4")}
+                >
+                  <i className="tim-icons icon-simple-remove" />
+                </button>
+                <h4 className="title title-up">Reforço Escolar</h4>
               </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col md="6">
-              <h4 className="mb-5 mt-3">Popovers</h4>
-              <Button
-                color="default"
-                data-container="body"
-                data-content="Here will be some very useful information about his popover."
-                data-placement="top"
-                id="tooltip657685043"
-                size="sm"
-                type="button"
-              >
-                On top
-              </Button>
-              <UncontrolledPopover placement="top" target="tooltip657685043">
-                <PopoverHeader>Popover on Top</PopoverHeader>
-                <PopoverBody>
-                  Here will be some very useful information about his popover.
-                </PopoverBody>
-              </UncontrolledPopover>
-              <Button
-                color="default"
-                data-container="body"
-                data-content="Here will be some very useful information about his popover.<br>
- Here will be some very useful information about his popover."
-                data-placement="right"
-                id="tooltip72798464"
-                size="sm"
-                type="button"
-              >
-                On right
-              </Button>
-              <UncontrolledPopover placement="right" target="tooltip72798464">
-                <PopoverHeader>Popover on Right</PopoverHeader>
-                <PopoverBody>
-                  Here will be some very useful information about his popover.
-                  <br /> Here will be some very useful information about his
-                  popover.
-                </PopoverBody>
-              </UncontrolledPopover>
-              <Button
-                color="default"
-                data-container="body"
-                data-content="Here will be some very useful information about his popover."
-                data-placement="bottom"
-                id="tooltip995717467"
-                size="sm"
-                type="button"
-              >
-                On bottom
-              </Button>
-              <UncontrolledPopover placement="bottom" target="tooltip995717467">
-                <PopoverHeader>Popover on Bottom</PopoverHeader>
-                <PopoverBody>
-                  Here will be some very useful information about his popover.
-                </PopoverBody>
-              </UncontrolledPopover>
-              <Button
-                color="default"
-                data-color="primary"
-                data-container="body"
-                data-content="Here will be some very useful information about his popover."
-                data-placement="left"
-                id="tooltip31162359"
-                size="sm"
-                type="button"
-              >
-                On left
-              </Button>
-              <UncontrolledPopover placement="left" target="tooltip31162359">
-                <PopoverHeader>Popover On Left</PopoverHeader>
-                <PopoverBody>
-                  Here will be some very useful information about his popover.
-                </PopoverBody>
-              </UncontrolledPopover>
-            </Col>
-            <Col md="6">
-              <h4 className="mb-5 mt-3">Tooltips</h4>
-              <Button
-                className="btn-tooltip"
-                color="default"
-                id="tooltip376048342"
-                size="sm"
-              >
-                On left
-              </Button>
-              <UncontrolledTooltip
-                delay={0}
-                placement="left"
-                target="tooltip376048342"
-              >
-                Tooltip on left
-              </UncontrolledTooltip>
-              <Button
-                className="btn-tooltip"
-                color="default"
-                id="tooltip297889956"
-                size="sm"
-              >
-                On top
-              </Button>
-              <UncontrolledTooltip
-                delay={0}
-                placement="top"
-                target="tooltip297889956"
-              >
-                Tooltip on top
-              </UncontrolledTooltip>
-              <Button
-                className="btn-tooltip"
-                color="default"
-                id="tooltip789511871"
-                size="sm"
-              >
-                On bottom
-              </Button>
-              <UncontrolledTooltip
-                delay={0}
-                placement="bottom"
-                target="tooltip789511871"
-              >
-                Tooltip on bottom
-              </UncontrolledTooltip>
-              <Button
-                className="btn-tooltip"
-                color="default"
-                id="tooltip353488548"
-                size="sm"
-              >
-                On right
-              </Button>
-              <UncontrolledTooltip
-                delay={0}
-                placement="right"
-                target="tooltip353488548"
-              >
-                Tooltip on right
-              </UncontrolledTooltip>
-              <div className="clearfix" />
-              <br />
-              <br />
-            </Col>
+              <div className="modal-body">
+                <p>
+                  PORTUGUÊS
+                  ​Idade: Todas as idades.
+                  Com foco nos conteúdos gramaticais, leitura e escrita, o curso de português tem como objetivo auxiliar o aluno na absorção do conteúdo e aplicação correta da língua portuguesa no cotidiano do aluno.
+                  REFORÇO ESCOLAR
+                  ​Idade: Todas as idades.
+                  O reforço escolar tem como objetivo auxiliar o alunos nas matérias da escola onde exista dificuldade de compreensão e absorção do conteúdo. Ao mesmo tempo que trabalha o conteúdo importante para o desempenho nas provas, também auxilia no desenvolvimento da habilidade de aprender a aprender.                </p>
+              </div>
+              <div className="modal-footer">
+                <Button
+                  color="danger"
+                  type="button"
+                  onClick={() => this.toggleModal("demoModal4")}
+                >
+                  Fechar
+                </Button>
+              </div>
+            </Modal>
+            {/* End Demo Modal 4*/}
+
+            {/* Start Demo Modal 5*/}
+            <Modal
+              isOpen={this.state.demoModal5}
+              toggle={() => this.toggleModal("demoModal5")}
+            >
+              <div className="modal-header justify-content-center">
+                <button
+                  className="close"
+                  onClick={() => this.toggleModal("demoModal5")}
+                >
+                  <i className="tim-icons icon-simple-remove" />
+                </button>
+                <h4 className="title title-up">Transtorno do Espectro Autista</h4>
+              </div>
+              <div className="modal-body">
+                <p>
+                  O autismo acomete pessoas de todas as classes sociais e etnias, ocorre mais em meninos do que em meninas. Os sintomas podem aparecer nos primeiros meses de vida e as pesquisas mostram que uma em cada cem crianças é portadora do espectro. Na nova nomenclatura, o DSM–V (Manual de Diagnóstico e Estatística da Sociedade Norte-Americana de Psiquiatria)usou o termo Transtorno do Espectro Autista (TEA), para abranger a dimensionalidade das características cognitivas e psicológicas e diminuir a ambiguidade que se tinha entre os quadros clínicos.  
+                  O Transtorno do Espectro Autista (TEA) é um grupo de desordens de origem neurobiológica marcadas por perturbações do desenvolvimento neurológico com maior comprometimento nas dificuldades de comunicação como dificuldade na fala e em expressar ideias e sentimentos, dificuldade de socialização e um padrão de comportamento restrito e repetitivo. 
+                  De acordo com o quadro clínico, o TEA pode ser classificado em:
+                  ·  Autismo clássico – grau de comprometimento pode variar de muito. 
+                  ·  Autismo de alto desempenho (síndrome de Asperger, na antiga nomenclatura) – os portadores apresentam as mesmas dificuldades dos outros autistas, mas numa medida bem reduzida. 
+                  ·  Distúrbio global do desenvolvimento sem outra especificação (DGD-SOE) – os portadores apresentam características dentro do espectro do autismo (dificuldade de comunicação e de interação social), mas os sintomas não são suficientes para preencher totalmente as categorias específicas do transtorno, o que torna o diagnóstico muito mais difícil.
+                  O diagnóstico é confirmado quando a criança apresenta características das três áreas que são afetadas no TEA: interação social, alteração comportamental e falhas na comunicação.  O TEA manifesta-se em diferentes graus e intensidade, por isso, a criança pode ser diagnosticada com autismo leve, moderado ou grave conforme o grau de comprometimento que a criança tenha.
+                  O TEA possui uma variedade grande de sintomas, representa uma das condições mais heterogêneas da psiquiatria, envolvendo tanto formas mais leves até formas mais graves, o que faz com que o diagnóstico no TEA seja um grande desafio. É fundamental a compreensão dessa variedade de sintomas de cada caso para o bom planejamento de procedimentos clínicos. Por isso é importante procurar uma equipe de profissionais especializados, que compreendam esta variedade de sintomas para a realização do diagnóstico quando há suspeita de TEA. 
+                  O diagnóstico é essencialmente clínico. Tem como base os critérios estabelecidos pelo DSM–V (Manual de Diagnóstico e Estatística da Sociedade Norte-Americana de Psiquiatria) e pelo CID-10 (Classificação Internacional de Doenças da OMS). 
+                  O diagnóstico deve ser feito o mais precocemente possível para o início de intervenções que ajudarão no desenvolvimento e adaptabilidade da criança em seu ambiente. Ainda que seja apenas suspeita, o paciente se beneficia da intervenção precoce, pois auxilia nas dificuldades reais que ele tenha. Sendo o TEA um transtorno do neurodesenvolvimento, seus sintomas podem ser detectados desde a primeira infância. A identificação precoce minimiza os impactos na vida da criança autista, já que é possível começar uma intervenção antes que os sintomas se agravem e diminui a angustia da família com as dificuldades em lidar com os sintomas do TEA.
+                  Crianças com autismo precisam de tratamento e suas famílias precisam de apoio, informação e treinamento. Com tratamento e informação adequados, a vida da criança TEA e sua família pode ser muito mais tranquila.
+                  Dra. Wanessa Garcia Santos Oliveira – psicóloga, psicopedagoga, mestra e doutora em Neuropsicologia Cognitiva (USP)
+                </p>
+              </div>
+              <div className="modal-footer">
+                <Button
+                  color="danger"
+                  type="button"
+                  onClick={() => this.toggleModal("demoModal5")}
+                >
+                  Fechar
+                </Button>
+              </div>
+            </Modal>
+            {/* End Demo Modal 5*/}
+
+            {/* Start Demo Modal 6*/}
+            <Modal
+              isOpen={this.state.demoModal6}
+              toggle={() => this.toggleModal("demoModal6")}
+            >
+              <div className="modal-header justify-content-center">
+                <button
+                  className="close"
+                  onClick={() => this.toggleModal("demoModal6")}
+                >
+                  <i className="tim-icons icon-simple-remove" />
+                </button>
+                <h4 className="title title-up">Triagem</h4>
+              </div>
+              <div className="modal-body">
+                <p>
+                  A Classificação Sócio-Econômica possibilita o enquadre de pacientes em planos específicos de atendimento, objetivando a obtenção de desconto no valor da avaliação multi e interdisciplinar.
+                  –  Os pacientes deverão ser alunos(as) da Rede Pública de Ensino e ter até 18 anos de idade; –  Alunos de escolas particulares serão atendidos somente mediante a comprovação de bolsas integrais de estudo.
+                  ​1 – Encaminhamento Escolar, feito em papel timbrado oficial, assinado e carimbado pela Coordenação Escolar, relatando sumariamente o motivo do encaminhamento – ORIGINAL E CÓPIA;
+                  2 – Comprovantes de gastos mensais: 1 (uma) conta de água atual, 1 (uma) conta de luz atual, 1 (uma) conta de telefone atual, 1 (um) recibo de aluguel do imóvel ou do comprovante de financiamento do imóvel atual, a última fatura do cartão de crédito e todas outras despesas fixas mensais que possuir – ORIGINAIS E CÓPIAS;
+                  3 – Comprovantes de rendas – Holerites recentes e Carteiras de Trabalho, não só do responsável, mas de quem mais trabalhar na residência do(a) paciente – ORIGINAIS E CÓPIAS;
+                  4 – Documentos dos responsáveis e do(a) paciente – RG ou CPF ou Certidão de Nascimento – ORIGINAIS E CÓPIAS;
+                  5 – A última declaração do Imposto de Renda, se houver – ORIGINAL E CÓPIA;
+                  6 – Laudos e exames médicos de avaliações já realizadas. Por exemplo, relatórios de profissionais, tais como: neurologistas, psicólogos(as), fonoaudiólogos(as), psicopedagogos(as) etc – ORIGINAIS E CÓPIAS.
+                  Esta documentação será analisada pelo C.T.A.S. – Centro de Triagem e Atendimento Social – da CEDA.. Após análise, o(a) responsável será comunicado(a) sobre a classificação sócio-econômica do caso, via telefone.
+                  *Obs.: Na data marcada para a triagem, os responsáveis deverão trazer TODAS documentações acima listadas. Caso contrário, o atendimento será automaticamente desmarcado.
+                </p>
+              </div>
+              <div className="modal-footer">
+                <Button
+                  color="danger"
+                  type="button"
+                  onClick={() => this.toggleModal("demoModal6")}
+                >
+                  Fechar
+                </Button>
+              </div>
+            </Modal>
+            {/* End Demo Modal 6*/}
+
           </Row>
         </Container>
-        <div className="section">
-          <Container>
-            <div className="title">
-              <h3>Carousel</h3>
-            </div>
-            <Row className="justify-content-between align-items-center">
-              <Col className="mb-5 mb-lg-0" lg="5">
-                <h1 className="text-white font-weight-light">
-                  Bootstrap carousel
-                </h1>
-                <p className="text-white mt-4">
-                  Black Design comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
-                </p>
-                <Button
-                  className="mt-4"
-                  color="warning"
-                  href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/alerts"
-                >
-                  See all components
-                </Button>
-              </Col>
-              <Col lg="6">
-                <UncontrolledCarousel
-                  items={carouselItems}
-                  indicators={false}
-                  autoPlay={false}
-                />
-              </Col>
-            </Row>
-          </Container>
-        </div>
       </div>
     );
   }

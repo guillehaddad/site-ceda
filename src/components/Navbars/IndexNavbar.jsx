@@ -87,7 +87,7 @@ class ComponentsNavbar extends React.Component {
               tag={Link}
             >
               <span>Ceda • </span>
-              Diferenças de Aprendizado
+              Diferentes Aprendizados
             </NavbarBrand>
             <button
               aria-expanded={this.state.collapseOpen}
